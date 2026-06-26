@@ -1,9 +1,11 @@
 ## 실행결과 (최초)
-<img width="1006" height="694" alt="image" src="https://github.com/user-attachments/assets/8cd01261-00ec-4fcf-8db3-479e6dbe4ca3" />
+<img width="794" height="450" alt="image" src="https://github.com/user-attachments/assets/686f7c11-1c2b-4d19-944e-d5ccf0eec1c0" />
+
 
 ## 실행결과(좌클릭)
-<img width="994" height="646" alt="image" src="https://github.com/user-attachments/assets/58528048-35ff-4731-844d-57bbbfe7e5e9" />
+<img width="806" height="468" alt="image" src="https://github.com/user-attachments/assets/3e8103ef-5c92-4c2e-816f-296527d321f7" />
 
 
 ## 실행결과 (우클릭)
-<img width="994" height="660" alt="image" src="https://github.com/user-attachments/assets/8ce0cfb3-479f-47f5-819d-03e2dd4f1a37" />
+<img width="792" height="454" alt="image" src="https://github.com/user-attachments/assets/a146afd8-9d53-4c1f-90d2-f0084add08fa" />
+
