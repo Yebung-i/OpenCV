@@ -1,4 +1,3 @@
-
 import numpy as np
 import cv2
 
@@ -14,9 +13,6 @@ image[:] = (255,255,255)
 
 
 while True:
-    curX = (250,250)
-    curY = (250,250)
-
     cv2.imshow(' img ', image)
 
     key = cv2.waitKeyEx(50)
