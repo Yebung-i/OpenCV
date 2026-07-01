@@ -4,7 +4,10 @@ import cv2
 def onChange(value):
     global image, title
 
-    res = cv2.add(image, value)
+    if value > 100:
+        res = cv2.add(image, 100)
+    else:
+        res = cv2.add(image, value)
     cv2.imshow(title, res)
 
 image = cv2.imread("lenna.bmp", cv2.IMREAD_GRAYSCALE)
