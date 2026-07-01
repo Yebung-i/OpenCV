@@ -1,6 +1,5 @@
 import numpy as np
 import cv2
-import time
 
 image = cv2.imread("lenna.bmp", cv2.IMREAD_GRAYSCALE)
 if image is None: raise Exception("파일 읽기 오류")
