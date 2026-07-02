@@ -1,0 +1,43 @@
+import numpy as np
+import cv2
+
+image = cv2.imread("lenna.bmp", cv2.IMREAD_GRAYSCALE)
+if image is None: raise Exception("파일 읽기 오류")
+
+isDrag = False
+startX, startY = -1, -1
+
+white = 255
+
+def onMouse(event, x, y, flags, param):
+    global isDrag, startX, startY, image
+
+    if event == cv2.EVENT_LBUTTONDOWN:
+        isDrag = True
+        startX, startY = x, y
+
+    elif event == cv2.EVENT_MOUSEMOVE:
+        if isDrag:
+            imageCopy = image.copy()
+            cv2.rectangle(imageCopy, (startX, startY), (x,y), white, 1)
+            cv2.imshow('src', imageCopy)
+
+    elif event == cv2.EVENT_LBUTTONUP:
+        if isDrag:
+            isDrag = False
+
+            x1, x2 = min(startX, x), max(startX, x)
+            y1, y2 = min(startY, y), max(startY, y)
+
+            if x2 - x1 > 0 and y2 - y1 > 0:
+                roi = image[y1:y2, x1:x2]
+
+                blurred = cv2.GaussianBlur(roi, (25,25), 0)
+                image[y1:y2, x1:x2] = blurred
+
+                cv2.imshow('src', image)
+
+cv2.imshow('src', image)
+cv2.setMouseCallback('src', onMouse)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
